@@ -1,0 +1,28 @@
+# Troubleshooting — SQL Case Study 1
+
+## ⚡ Common Issues Faced
+
+### 1. Secure-File-Priv Error
+- **Problem:** MySQL blocked bulk data import due to `secure-file-priv` restriction.
+- **Solution:** 
+  - Checked MySQL config (`my.ini`).
+  - Updated `secure-file-priv` path OR used `LOAD DATA LOCAL INFILE`.
+
+### 2. Data Import Errors
+- **Problem:** CSV import failed due to wrong delimiter.
+- **Solution:** Ensured file used **comma (`,`) delimiter** and proper column order.
+
+### 3. Query Formatting
+- **Problem:** Queries became hard to read when long.
+- **Solution:** Used **aliases (F, L)** and proper indentation.
+
+### 4. Screenshots Proof
+- **Problem:** Some screenshots were blurry.
+- **Solution:** Increased Workbench zoom and re-captured outputs.
+
+---
+
+## ✅ Tips for Future
+- Always keep **schema scripts** ready for reproducibility.
+- Maintain **task-wise SQL files** for clarity.
+- Document errors + fixes → shows recruiter you can troubleshoot independently.
