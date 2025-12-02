@@ -1,0 +1,20 @@
+# Notes — SQL Case Study 1
+
+## 📌 Key Learnings
+- Practiced **JOINs** (INNER JOIN) to connect FactTable with LocationTable.
+- Applied **GROUP BY** with aggregate functions (SUM, AVG) for market, state, and market size analysis.
+- Used **ORDER BY DESC** to highlight top-performing markets and states.
+- Learned how to structure queries systematically (Task01 → Task29).
+- Improved confidence in handling **real-world datasets** with multiple dimensions.
+
+## 🧠 Concepts Reinforced
+- Difference between **SUM vs AVG** in business analysis.
+- Importance of **MarketSize** dimension (Large, Medium, Small).
+- How **Budgeted vs Actual values** (Sales, COGS, Margin) are compared in reporting.
+- Role of **screenshots** as proof of execution.
+
+## 🚀 Personal Takeaway
+This case study helped me strengthen:
+- Query writing speed and accuracy.
+- Documentation skills (README + repo structure).
+- Portfolio building for recruiters.
