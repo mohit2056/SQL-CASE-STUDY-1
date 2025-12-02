@@ -1,0 +1,295 @@
+Task01.sql — Total sales
+
+SELECT 
+  SUM(F.Sales) AS TotalSales
+FROM FactTable F;
+
+Task02.sql — Total profit
+SELECT 
+  SUM(F.Profit) AS TotalProfit
+FROM FactTable F;
+
+
+Task03.sql — Total COGS
+SELECT 
+  SUM(F.COGS) AS TotalCOGS
+FROM FactTable F;
+
+
+Task04.sql — Average sales
+SELECT 
+  AVG(F.Sales) AS AvgSales
+FROM FactTable F;
+
+
+Task05.sql — Average profit
+SELECT 
+  AVG(F.Profit) AS AvgProfit
+FROM FactTable F;
+
+
+Task06.sql — Average COGS
+SELECT 
+  AVG(F.COGS) AS AvgCOGS
+FROM FactTable F;
+
+
+Task07.sql — Total sales by market
+SELECT 
+  L.Market,
+  SUM(F.Sales) AS TotalSales
+FROM FactTable F
+JOIN LocationTable L 
+  ON F.AreaCode = L.AreaCode
+GROUP BY L.Market
+ORDER BY TotalSales DESC;
+
+
+Task08.sql — Total profit by market
+SELECT 
+  L.Market,
+  SUM(F.Profit) AS TotalProfit
+FROM FactTable F
+JOIN LocationTable L 
+  ON F.AreaCode = L.AreaCode
+GROUP BY L.Market
+ORDER BY TotalProfit DESC;
+
+
+Task09.sql — Total COGS by market
+SELECT 
+  L.Market,
+  SUM(F.COGS) AS TotalCOGS
+FROM FactTable F
+JOIN LocationTable L 
+  ON F.AreaCode = L.AreaCode
+GROUP BY L.Market
+ORDER BY TotalCOGS DESC;
+
+
+Task10.sql — Average sales by market
+SELECT 
+  L.Market,
+  AVG(F.Sales) AS AvgSales
+FROM FactTable F
+JOIN LocationTable L 
+  ON F.AreaCode = L.AreaCode
+GROUP BY L.Market
+ORDER BY AvgSales DESC;
+
+
+Task11.sql — Average profit by market
+SELECT 
+  L.Market,
+  AVG(F.Profit) AS AvgProfit
+FROM FactTable F
+JOIN LocationTable L 
+  ON F.AreaCode = L.AreaCode
+GROUP BY L.Market
+ORDER BY AvgProfit DESC;
+
+
+Task12.sql — Average COGS by market
+SELECT 
+  L.Market,
+  AVG(F.COGS) AS AvgCOGS
+FROM FactTable F
+JOIN LocationTable L 
+  ON F.AreaCode = L.AreaCode
+GROUP BY L.Market
+ORDER BY AvgCOGS DESC;
+
+
+Task13.sql — Total sales by market size
+SELECT 
+  L.MarketSize,
+  SUM(F.Sales) AS TotalSales
+FROM FactTable F
+JOIN LocationTable L 
+  ON F.AreaCode = L.AreaCode
+GROUP BY L.MarketSize
+ORDER BY TotalSales DESC;
+
+
+Task14.sql — Total profit by market size
+SELECT 
+  L.MarketSize,
+  SUM(F.Profit) AS TotalProfit
+FROM FactTable F
+JOIN LocationTable L 
+  ON F.AreaCode = L.AreaCode
+GROUP BY L.MarketSize
+ORDER BY TotalProfit DESC;
+
+
+Task15.sql — Total COGS by market size
+SELECT 
+  L.MarketSize,
+  SUM(F.COGS) AS TotalCOGS
+FROM FactTable F
+JOIN LocationTable L 
+  ON F.AreaCode = L.AreaCode
+GROUP BY L.MarketSize
+ORDER BY TotalCOGS DESC;
+
+
+Task16.sql — Average profit by market size
+SELECT 
+  L.MarketSize,
+  AVG(F.Profit) AS AvgProfit
+FROM FactTable F
+JOIN LocationTable L 
+  ON F.AreaCode = L.AreaCode
+GROUP BY L.MarketSize
+ORDER BY AvgProfit DESC;
+
+
+Task17.sql — Average inventory by market size
+SELECT 
+  L.MarketSize,
+  AVG(F.Inventory) AS AvgInventory
+FROM FactTable F
+JOIN LocationTable L 
+  ON F.AreaCode = L.AreaCode
+GROUP BY L.MarketSize
+ORDER BY AvgInventory DESC;
+
+
+Task18.sql — Total budgeted COGS by market
+SELECT 
+  L.Market,
+  SUM(F.BudgetCOGS) AS TotalBudgetCOGS
+FROM FactTable F
+JOIN LocationTable L 
+  ON F.AreaCode = L.AreaCode
+GROUP BY L.Market
+ORDER BY TotalBudgetCOGS DESC;
+
+
+Task19.sql — Total margin by market size
+SELECT 
+  L.MarketSize,
+  SUM(F.Margin) AS TotalMargin
+FROM FactTable F
+JOIN LocationTable L 
+  ON F.AreaCode = L.AreaCode
+GROUP BY L.MarketSize
+ORDER BY TotalMargin DESC;
+
+
+Task20.sql — Average inventory by state
+SELECT 
+  L.State,
+  AVG(F.Inventory) AS AvgInventory
+FROM FactTable F
+JOIN LocationTable L 
+  ON F.AreaCode = L.AreaCode
+GROUP BY L.State
+ORDER BY AvgInventory DESC;
+
+
+Task21.sql — Total budgeted sales by market size
+SELECT 
+  L.MarketSize,
+  SUM(F.BudgetSales) AS TotalBudgetSales
+FROM FactTable F
+JOIN LocationTable L 
+  ON F.AreaCode = L.AreaCode
+GROUP BY L.MarketSize
+ORDER BY TotalBudgetSales DESC;
+
+
+Task22.sql — Average marketing expenses by market
+SELECT 
+  L.Market,
+  AVG(F.Marketing) AS AvgMarketing
+FROM FactTable F
+JOIN LocationTable L 
+  ON F.AreaCode = L.AreaCode
+GROUP BY L.Market
+ORDER BY AvgMarketing DESC;
+
+
+Task23.sql — Total profit by state
+SELECT 
+  L.State,
+  SUM(F.Profit) AS TotalProfit
+FROM FactTable F
+JOIN LocationTable L 
+  ON F.AreaCode = L.AreaCode
+GROUP BY L.State
+ORDER BY TotalProfit DESC;
+
+
+Task24.sql — Average budgeted sales by market
+SELECT 
+  L.Market,
+  AVG(F.BudgetSales) AS AvgBudgetSales
+FROM FactTable F
+JOIN LocationTable L 
+  ON F.AreaCode = L.AreaCode
+GROUP BY L.Market
+ORDER BY AvgBudgetSales DESC;
+
+
+Task25.sql — Total COGS by market size
+SELECT 
+  L.MarketSize,
+  SUM(F.COGS) AS TotalCOGS
+FROM FactTable F
+JOIN LocationTable L 
+  ON F.AreaCode = L.AreaCode
+GROUP BY L.MarketSize
+ORDER BY TotalCOGS DESC;
+
+
+Task26.sql — Average profit by state
+SELECT 
+  L.State,
+  AVG(F.Profit) AS AvgProfit
+FROM FactTable F
+JOIN LocationTable L 
+  ON F.AreaCode = L.AreaCode
+GROUP BY L.State
+ORDER BY AvgProfit DESC;
+
+
+Task27.sql — Total sales by state
+SELECT 
+  L.State,
+  SUM(F.Sales) AS TotalSales
+FROM FactTable F
+JOIN LocationTable L 
+  ON F.AreaCode = L.AreaCode
+GROUP BY L.State
+ORDER BY TotalSales DESC;
+
+
+Task28.sql — Average COGS by market
+SELECT 
+  L.Market,
+  AVG(F.COGS) AS AvgCOGS
+FROM FactTable F
+JOIN LocationTable L 
+  ON F.AreaCode = L.AreaCode
+GROUP BY L.Market
+ORDER BY AvgCOGS DESC;
+
+
+Task29.sql — Total budgeted margin by market
+SELECT 
+  L.Market,
+  SUM(F.BudgetMargin) AS TotalBudgetMargin
+FROM FactTable F
+JOIN LocationTable L 
+  ON F.AreaCode = L.AreaCode
+GROUP BY L.Market
+ORDER BY TotalBudgetMargin DESC;
+
+
+
+Notes for consistency
+- Labels: Keep exact filenames Task01.sql … Task29.sql to match your screenshots.
+- Columns: If your fact table uses different names (e.g., Budget_COGS, Marketing_Expenses), replace in queries.
+- Ordering: DESC prioritizes top performers; change to ASC if you need lowest-first.
+Want me to add headers/comments at the top of each SQL file (Task number, purpose, columns used) so it looks extra polished?
